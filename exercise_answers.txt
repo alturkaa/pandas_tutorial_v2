@@ -1,0 +1,21 @@
+Q1:
+
+housing_orgs_5yrs.sort('INCOME').head()
+
+housing_orgs_5yrs.sort('INCOME').tail()
+
+Q2: 
+
+founded_12.groupby('year').EIN.nunique()
+
+Q3:
+
+(data_13.RULEDATE // 1000 * 10).value_counts().sort_index()
+
+data_13.groupby((data_13.RULEDATE // 1000 * 10)).size()
+
+(data_13.RULEDATE // 1000 * 10).value_counts().sort_index().plot()
+
+Q4:
+
+grouped = mid_size.groupby(['city_lower', mid_size['Year']]).size()
